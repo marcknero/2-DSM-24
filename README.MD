@@ -8,3 +8,6 @@
  | [`Atividade 3`](https://github.com/marcknero/2-DSM-24/tree/main/DesenvolvimentoWeb/atividade3-240917)|
 
  
+ | Algoritimo |
+ |----|
+ | [`Atividade Aula 6`](https://github.com/marcknero/2-DSM-24/tree/main/Algoritmo/AtividadeAula6) |

@@ -6,7 +6,7 @@
  | [`Atividade 1`](https://github.com/marcknero/2-DSM-24/tree/main/DesenvolvimentoWeb/lista1) |
  | [`Atividade 2`](https://github.com/marcknero/2-DSM-24/blob/main/DesenvolvimentoWeb/lista2.html) |
  | [`Atividade 3`](https://github.com/marcknero/2-DSM-24/tree/main/DesenvolvimentoWeb/atividade3-240917)|
-
+| [`Atividade 4`](marcknero/2-DSM-24/DesenvolvimentoWeb/241001)|
  
  | Algoritimo |
  |----|

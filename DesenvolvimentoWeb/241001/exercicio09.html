@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercício 9</title>
+    <style>
+      html {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        font-family: calibri;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+      }
+      #menu{
+        display: inline-flex;
+        flex:1;
+        align-items: center;  
+        justify-content: space-between;      
+      }
+      #rodape{
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #corpo{
+        display:inline-flex;
+        flex: 8;
+        width: 100vw;
+        justify-content: space-evenly;
+      }
+      #titulo{
+        display: inline-flex;
+        align-items: center;
+        font-size: 60px;
+        font-weight: 1000;
+        padding: 10px;
+      }
+      #avatar{
+        display: inline-flex;
+        align-items: center;
+        padding: 20px;
+        font-size: 18px;
+      }
+      #avatar > div{
+        padding: 10px;
+      }
+      #esquerda{
+        display: flex;
+        flex-direction: column;
+        background-color: gray;
+        width: 200px;
+        padding: 20px 5px;
+        font-size: 25px;
+      }
+      #esquerda>a:hover{
+        color: red;
+      }
+      #direita{
+        flex:2;            
+        display:inline-flex;
+        flex: 8;
+        background-color: gray;
+        width: 100vw;
+        justify-content: space-evenly;
+      }
+      form{
+        flex:1;
+        color: aliceblue;
+        align-self: center;
+        padding: 80px;
+        border-radius: 5px;
+        align-items: center;
+      }
+      form>fieldset{
+        font-size: 20px;
+        padding: 30px;
+        border-radius: 10px;
+        box-sizing: content-box;
+      }
+      form>fieldset>div{
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+        
+      }
+      form>fieldset>div>input{
+        border-radius: 8px;
+        padding: 8px;
+      }
+      #botoes{
+        flex-direction: row-reverse;
+      }
+      #botoes>input{
+        color: aliceblue;
+        font-size: 15px;
+        background-color: blue;
+        margin: 5px;
+      }
+    </style>
+  </head>
+
+<body>
+    <div id="menu">
+      <div id="titulo">
+        <img src="./imagens/css.png" alt="" width="60" height="60" />
+        <div>CSS3</div>
+      </div>
+      <div id="avatar">
+        <div>Bill Gates</div>
+        <img src="./imagens/avatar.jpg" alt="" width="42" height="42" />
+      </div>
+    </div>
+    <div id="corpo">
+      <div id="esquerda">
+        <a href="./exercicio01.html">Exercício 01</a>
+        <a href="./exercicio02.html">Exercício 02</a>
+        <a href="./exercicio03.html">Exercício 03</a>
+        <a href="./exercicio04.html">Exercício 04</a>
+        <a href="./exercicio05.html">Exercício 05</a>
+        <a href="./exercicio06.html">Exercício 06</a>
+        <a href="./exercicio07.html">Exercício 07</a>
+        <a href="./exercicio08.html">Exercício 08</a>
+        <a href="./exercicio10.html">Exercício 10</a>
+      </div>
+      <div id="direita">
+        <form>
+          <fieldset>
+            <legend>Login</legend>
+            <div>
+              <label>e-mail</label>
+              <input type="email" name="mail" />
+            </div>
+            <div>
+              <label>Senha</label>
+              <input type="password" name="senha" />
+            </div>
+            <div id="botoes">
+              <input type="submit" value="Enviar" class="botao" />
+              <input type="reset" value="Limpar" class="botao" />
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div id="rodape">
+      <img src="./imagens/Fatec.png" alt="" width="87" height="41" />
+      <img src="./imagens/CPS.png" alt="" width="85" height="56" />
+      <img src="./imagens/Brasao.png" alt="" width="81" height="54" />
+    </div>
+  </body>
+</html>

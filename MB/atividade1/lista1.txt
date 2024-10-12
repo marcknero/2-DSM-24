@@ -1,0 +1,78 @@
+Exercicio 1:
+
+drop table if exists endereco;
+drop table if exists bairro;
+drop table if exists cidade;
+
+
+Exercicio 2:
+	
+create table if not exists cidade (
+	idcidade INTEGER PRIMARY KEY,
+	nome VARCHAR(40) NOT NULL,
+	uf CHAR(2) NOT NULL
+);
+CREATE TABLE if not exists bairro (
+  idbairro INTEGER NOT NULL,
+  nome VARCHAR(20) NOT NULL,
+  cidade_idcidade INTEGER NOT NULL,
+  PRIMARY KEY(idbairro),
+	foreign key (cidade_idcidade)
+	references cidade (idcidade)
+);
+CREATE TABLE if not exists endereco (
+  idendereco INTEGER NOT NULL,
+  idbairro INTEGER NOT NULL,
+  logradouro VARCHAR(30) NULL,
+  numero INTEGER NULL,
+  cep INTEGER NULL,
+  PRIMARY KEY(idendereco),
+  FOREIGN KEY (idbairro)
+  REFERENCES bairro (idbairro)
+);
+
+
+exercicio 3:
+
+CREATE TABLE IF NOT EXISTS tarefa (
+	idtarefa INTEGER NOT NULL PRIMARY KEY,
+	nome  VARCHAR(30) NOT NULL,
+	valor FLOAT NOT NULL,
+	idtarefapai INTEGER CONSTRAINT fk_idtarefa REFERENCES tarefa (idtarefa)
+);
+
+
+exercicio 4:
+ 
+CREATE TABLE if not exists veiculo (
+	placa CHAR(7) NOT NULL PRIMARY KEY,
+	marca VARCHAR(20) NOT NULL,
+	modelo VARCHAR(20) not null
+);
+
+CREATE TABLE IF NOT EXISTS vaga (
+	nome varchar(10) not null primary key
+);
+
+CREATE TABLE IF NOT EXISTS ocupa (
+	placa_veiculo char(7) not null REFERENCES veiculo (placa),
+	nome_vaga varchar (10) not null references vaga (nome),
+	valor float not null,
+	inicio timestamp,
+	fim timestamp,
+	primary key (placaVeiculo, nomeVaga)
+);
+
+
+exercicio 5:
+
+CREATE TABLE if not exists pessoa (
+	idpessoa integer not null primary key,
+	nome varchar(40) not null
+);
+CREATE TABLE if not exists imovel (
+	idimovel integer not null primary key,
+	descrição varchar(50),
+	idproprietario integer constraint fk_idproprietario references pessoa (idpessoa),
+	idinquilino integer constraint fk_idinquilino references pessoa (idpessoa)
+);

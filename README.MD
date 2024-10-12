@@ -6,8 +6,12 @@
  | [`Atividade 1`](https://github.com/marcknero/2-DSM-24/tree/main/DesenvolvimentoWeb/lista1) |
  | [`Atividade 2`](https://github.com/marcknero/2-DSM-24/blob/main/DesenvolvimentoWeb/lista2.html) |
  | [`Atividade 3`](https://github.com/marcknero/2-DSM-24/tree/main/DesenvolvimentoWeb/atividade3-240917)|
-| [`Atividade 4`](./DesenvolvimentoWeb/241001)|
+ | [`Atividade 4`](./DesenvolvimentoWeb/241001)|
  
  | Algoritimo |
  |----|
  | [`Atividade Aula 6`](https://github.com/marcknero/2-DSM-24/tree/main/Algoritmo/AtividadeAula6) |
+
+ | Modelagem de Banco de Dados |
+ |----|
+ | [`Atividade 1`](./MB/atividade1/lista1.txt) |

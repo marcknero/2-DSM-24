@@ -9,7 +9,7 @@
  | [`Atividade 4`](./2s2024/DesenvolvimentoWeb/241001/)|
  | [`Atividade 5`](./2s2024/DesenvolvimentoWeb/lista5)|
  
- | Algoritimo |
+ | Algoritimo (atividades de revisão)|
  |----|
  | [`Atividade Aula 6`](./2s2024/Algoritmo/AtividadeAula6/) |
 

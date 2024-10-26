@@ -1,0 +1,93 @@
+scrip para criação das tabelas do exercicio:
+drop table if exists tbmatricula;
+drop table if exists tbaluno;
+drop table if exists tbdisciplina;
+create table if not exists tbaluno (
+id INTEGER PRIMARY KEY,
+nome VARCHAR(40) not null
+);
+create table if not exists tbdisciplina (
+id INTEGER PRIMARY KEY,
+nome VARCHAR(30) not null,
+carga INTEGER
+);
+create table if not exists tbmatricula (
+iddisciplina INTEGER,
+idaluno INTEGER,
+nota FLOAT,
+PRIMARY KEY (iddisciplina, idaluno),
+FOREIGN KEY (iddisciplina)REFERENCES tbdisciplina(id),
+FOREIGN KEY (idaluno)REFERENCES tbaluno(id)
+);
+
+
+ex1:
+insert into tbaluno (id,nome)
+values
+(1,'Ana Maria'),
+(5,'Luiz Carlos'),
+(6,'Mria Silva'),
+(7,'Renato Rodrigues'),
+(8,'Carla Santiago');
+
+ex2:
+insert into tbdisciplina
+values
+(1,'Modelagem de Banco de Dados',80),
+(2,'Design Digital',80),
+(3,'Estrutura de Dados',null),
+(4,'Experiência do Usuário',40),
+(5,'Aprendizagem de Máquina',null),
+(6,'Inglês I',null);
+
+ex3:
+insert into tbmatricula
+values
+(3,1,7.8),
+(1,8,8.4),
+(1,5,7.5),
+(6,5,null),
+(3,7,null),
+(5,7,8.9),
+(6,7,null);
+
+ex4:
+update tbmatricula
+set nota = nota+0.5
+where nota is not null;
+
+ex5:
+update tbmatricula
+set nota = nota + 0.2
+from tbdisciplina
+where tbmatricula.iddisciplina = tbdisciplina.id
+and nota is not null 
+and tbdisciplina.nome = 'Modelagem de Banco de Dados';
+
+ex6:
+update tbmatricula
+set nota = 5
+from tbdisciplina, tbaluno
+where tbmatricula.iddisciplina = tbdisciplina.id
+and tbmatricula.idaluno = tbaluno.id
+and tbdisciplina.nome = 'Inglês I'
+and tbaluno.nome = 'Luiz Carlos';
+
+ex7:
+update tbmatricula
+set nota = 0
+where nota is null;
+
+ex8:
+delete from tbmatricula
+where nota = 0;
+
+ex9:
+delete from tbmatricula
+using tbaluno, tbdisciplina
+where tbaluno.id = tbmatricula.idaluno
+and tbdisciplina.id = tbmatricula.iddisciplina
+and tbaluno.nome = 'Luiz Carlos' and tbdisciplina.nome ilike 'Inglês%';
+
+ex10:
+delete from tbmatricula;

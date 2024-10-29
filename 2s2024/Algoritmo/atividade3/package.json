@@ -1,0 +1,22 @@
+{
+  "name": "atividade3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "um": "node ./src/ex01.js",
+    "dois": "node ./src/ex02.js",
+    "tres": "node ./src/ex03.js",
+    "quatro": "node ./src/ex04.js",
+    "cinco": "node ./src/ex05.js",
+    "seis": "node ./src/ex06.js",
+    "sete": "node ./src/ex07.js",
+    "oito": "node ./src/ex08.js",
+    "nove": "node ./src/ex09.js",
+    "dez": "node ./src/ex10.js",
+    "teste": "node ./src/teste.js"
+  },
+  "keywords": [],
+  "author": "Marcos Vinicius",
+  "license": "ISC",
+  "description": ""
+}

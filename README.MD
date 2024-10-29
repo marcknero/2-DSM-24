@@ -12,6 +12,10 @@
  | Algoritimo (atividades de revisão)|
  |----|
  | [`Atividade Aula 6`](./2s2024/Algoritmo/AtividadeAula6/) |
+ | [`Atividade 1`](./2s2024/Algoritmo/atividade1) |
+ | [`Atividade 2`](./2s2024/Algoritmo/atividade2) |
+ | [`Atividade 3`](./2s2024/Algoritmo/atividade3) |
+ | [`Atividade 4`](./2s2024/Algoritmo/atividade4) |
 
  | Modelagem de Banco de Dados |
  |----|

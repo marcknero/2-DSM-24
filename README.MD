@@ -8,6 +8,7 @@
  | [`Atividade 3`](./2s2024/DesenvolvimentoWeb/atividade3-240917/)|
  | [`Atividade 4`](./2s2024/DesenvolvimentoWeb/241001/)|
  | [`Atividade 5`](./2s2024/DesenvolvimentoWeb/lista5)|
+ | [`Atividade 6 - Bootstrap`](./2s2024/DesenvolvimentoWeb/bootstrap/)|
  
  | Algoritimo (atividades de revisão)|
  |----|

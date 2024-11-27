@@ -9,6 +9,7 @@
  | [`Atividade 4`](./2s2024/DesenvolvimentoWeb/241001/)|
  | [`Atividade 5`](./2s2024/DesenvolvimentoWeb/lista5)|
  | [`Atividade 6 - Bootstrap`](./2s2024/DesenvolvimentoWeb/bootstrap/)|
+ | [`Atividade 7`](./2s2024/DesenvolvimentoWeb/lista7/)|
  
  | Algoritimo (atividades de revisão)|
  |----|

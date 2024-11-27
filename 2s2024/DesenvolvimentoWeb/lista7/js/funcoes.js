@@ -92,3 +92,22 @@ function exer8(){
     };
 };
 
+//exercicio 09
+var somNomes = 0;
+function exer9(){
+  const entrada = document.querySelector('#entrada').value;
+  if (!entrada){
+    alert('Escreva algum valor para o campo entrada');
+  } else {
+    const item = document.createElement('li');
+    const paragrafo = document.createTextNode(entrada);
+    document.querySelector('ol').appendChild(item);
+    item.setAttribute('title', entrada);
+    item.appendChild(paragrafo);
+
+    document.querySelector('#entrada').value = '';
+    document.getElementById('entrada').focus();
+    somNomes = somNomes +1;
+    document.querySelector('#total').textContent(somNomes);
+    };
+};

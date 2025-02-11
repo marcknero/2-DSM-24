@@ -1,5 +1,8 @@
 # REPOSITORIO DE ATIVIDADES FATEC Jacareí
- Repositório utilizado para postagem e disponibilização das atividades solicitadas pelos professores e em suas matérias, durante a realização do curso de formação superior em tecnologia de Desenvolvimento de Software Multiplataforma, realizado na FATEC Jacareí.
+  Repositório voltado para postagem e apresentação das atividades realizadas durante o curso de Desenvolvimento de Software Multiplataforma, na FATEC - Jacareí.
+
+<details>
+<summary> Atividades do 2º semestre de 2024 </summary>
 
  | Desenvolvimento WEB |
  |----|
@@ -23,3 +26,9 @@
  |----|
  | [`Atividade 1`](./2s2024/MB/atividade1/lista1.txt) |
  | [`Atividade 2`](./2s2024/MB/atividade2/atvReposicao20-11.txt) |
+</details>
+
+<details>
+<summary> Atividades do 1º semestre de 2025 </summary>
+
+</details>

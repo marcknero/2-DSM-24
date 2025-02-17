@@ -1,8 +1,0 @@
-para iniciar a maior parte dos sistemas e programações, principalmente durante as aulas de tecnicas de programação
-deve-se iniciar o IDE com:
-  npm i typescript -g
-  tsc --version >>> para conferir se instalado e a versao
-  npm -init -y
-  npm i -D ts-node typescript
-  tsc -init
-

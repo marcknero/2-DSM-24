@@ -29,6 +29,6 @@
 </details>
 
 <details>
-<summary> Atividades do 1º semestre de 2025 </summary>
+
 
 </details>

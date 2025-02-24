@@ -27,8 +27,3 @@
  | [`Atividade 1`](./2s2024/MB/atividade1/lista1.txt) |
  | [`Atividade 2`](./2s2024/MB/atividade2/atvReposicao20-11.txt) |
 </details>
-
-<details>
-
-
-</details>

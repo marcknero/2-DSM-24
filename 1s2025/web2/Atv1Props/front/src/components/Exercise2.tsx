@@ -6,7 +6,12 @@ function Exercise2() {
 
 
       function set(value:number){
-        setList((prev)=> [...prev,value]);
+        const tempList = [...list,value];
+        if (tempList.length>12){
+            tempList.shift();
+        }
+
+        setList(tempList);
         setNros('');
     
       }

@@ -34,7 +34,7 @@ function Exercise1() {
         />
         <div style={divBallStyle}>
           {raffled.map((value, index) => {
-            return <Ball label={value} />;
+            return <Ball key ={index} label={value} />;
           })}
         </div>
       </div>

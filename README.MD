@@ -27,3 +27,12 @@
  | [`Atividade 1`](./2s2024/MB/atividade1/lista1.txt) |
  | [`Atividade 2`](./2s2024/MB/atividade2/atvReposicao20-11.txt) |
 </details>
+<details>
+<summary> Atividades do 1º semestre de 2025 </summary>
+
+ | Programação Web II |
+ |----|
+
+ | [`Atividade 1 - Props`](./1s2025/web2/Atv1Props/front/src/components/) |
+
+</details>

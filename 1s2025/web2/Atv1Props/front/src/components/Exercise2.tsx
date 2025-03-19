@@ -13,13 +13,18 @@ function Exercise2() {
 
         setList(tempList);
         setNros('');
-    
-      }
+       }
 
       function handleKeyDown(e: React.KeyboardEvent<HTMLInputElement>){
         if(e.key === 'Enter' && nros !== '' && nros !== undefined){
             set(parseInt(nros));
         }}
+
+        function remove(index:number){
+            const tempList = [...list];
+            tempList.splice(index,1);
+            setList(tempList);
+        }
             
       return (
         <>
@@ -32,7 +37,14 @@ function Exercise2() {
           onKeyDown={handleKeyDown} 
           placeholder="Digite um numero de 1 a 12" />
           <div style={divBallStyle}>{list.map((value,index)=> {
-            return <Ball key={index} label={value}/>
+            return <Ball 
+            key={index} 
+            label={value}
+            onContextMenu={(e)=>{
+                e.preventDefault();
+                remove(index);
+            }}
+            />
           })}
           </div>
           </div>
@@ -42,11 +54,12 @@ function Exercise2() {
 
 interface BallProps {
     label: number;
+    onContextMenu: (e: React.MouseEvent<HTMLButtonElement,MouseEvent>) => void;
 }
 
-function Ball({label}: BallProps) {
+function Ball({label,onContextMenu}: BallProps) {
   return ( <>
-    <button style={ballStyle}>{label}</button>
+    <button style={ballStyle} onContextMenu={onContextMenu}>{label}</button>
   </>
   );
 }

@@ -6,3 +6,7 @@ export interface LetterCtxProps {
 export interface Props {
     children: React.ReactNode;
 }
+
+export interface BallProps {
+    label: string;
+}

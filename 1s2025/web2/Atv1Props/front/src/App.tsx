@@ -5,8 +5,8 @@ import './App.css'
 function App() {
   return (
     <>
-    <div>{Exercise1()}</div>
-    <div>{Exercise2()}</div>
+    <Exercise1/>
+    <Exercise2
     </>
   )
 }

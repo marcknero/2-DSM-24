@@ -33,6 +33,7 @@
  | Programação Web II |
  |----|
 
- | [`Atividade 1 - Props`](./1s2025/web2/Atv1Props/front/src/components/) |
+ | [`Atividade 1 - Props`](./1s2025/web2/Atv1Props/front/) |
+ | [`Atividade 2 - Context`](./1s2025/web2/atvContext/front/) |
 
 </details>

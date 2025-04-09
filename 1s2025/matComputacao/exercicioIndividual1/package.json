@@ -1,0 +1,14 @@
+{
+  "name": "exercicioindividual1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "index": "ts-node pc7_4.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}

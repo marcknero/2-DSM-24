@@ -36,4 +36,10 @@
  | [`Atividade 1 - Props`](./1s2025/web2/Atv1Props/front/) |
  | [`Atividade 2 - Context`](./1s2025/web2/atvContext/front/) |
 
+ | Matematica para Computação |
+ |----|
+
+ | [`Atividade individual 1`](./1s2025/matComputacao/exercicioIndividual1) |
+
+
 </details>

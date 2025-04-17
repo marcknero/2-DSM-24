@@ -5,10 +5,11 @@ display: "flex",
 width:"100%",
 justifyContent: "space-between",
 alignItems: "flex-end",
-padding:"0",
+padding:"0px",
 backgroundColor: "rgba(0, 0, 0, 0.4)",
-boxShadow:"0px 2px 5px rgba(0,0,0,0.1)",
-margin:"0"
+boxShadow:"1px 5px 5px rgba(0,0,0,0.2)",
+margin:"2px",
+borderRadius:"15px"
 }
 
 export const logoStyle: CSSProperties={

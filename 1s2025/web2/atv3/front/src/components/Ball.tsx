@@ -8,11 +8,11 @@ export function Ball({ label }: BallProps) {
 
 
 const ballStyle: CSSProperties = {
-    backgroundColor: "blue",
+    backgroundColor: "rgba(35, 187, 29, 0.88)",
     color: "white",
     padding: "5px 10px",
     marginRight: "10px",
-    fontSize: "14px",
+    fontSize: "20px",
     fontWeight: "bold",
     border: "none",
     borderRadius: "20px",

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { MegaCtx } from "../contexts/MegaCtx";
 import { Ball } from "./Ball";
+import { displayStyle } from "../styles/displayStyle";
 
 export default function Display() {
     const { addToHistory } = useContext(MegaCtx);
@@ -9,10 +10,10 @@ export default function Display() {
     function raffle() {
         let nros: number[] = [];
         let nro: number | null = null;
-        for (let i: number = 0; i < 5; i++) {
+        for (let i: number = 0; i <= 5; i++) {
             nro = Math.floor(Math.random() * 60+1);
             if (nro in nros || nro === 61) {
-                i--;
+                i--
             } else {
                 nros.push(nro);
             }
@@ -24,7 +25,7 @@ export default function Display() {
     return <>
         <div>
             <h2>Palpite para Mega-sena:</h2>
-            <div>
+            <div style={displayStyle}>
                 {sorted.map((num, index) => (
                     <Ball key={index} label={num} />
                 ))}

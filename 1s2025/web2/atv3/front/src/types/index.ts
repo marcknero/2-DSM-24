@@ -1,5 +1,4 @@
 export interface MegaCtxProps {
-    //range: number;
     history:number[][];
     addToHistory: (nros: number[]) => void;
 }

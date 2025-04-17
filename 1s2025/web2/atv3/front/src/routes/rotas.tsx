@@ -1,6 +1,6 @@
 import { Routes,Route,Navigate } from "react-router-dom"
 import Historico from "../components/Historico"
-import Palpite from "../components/palpite"
+import Palpite from "../components/Palpite"
 
 
 export default function Rotas(){

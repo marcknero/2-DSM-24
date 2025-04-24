@@ -1,32 +1,35 @@
 import * as fs from "fs";
 
-function stem(palavra: string): string {
-    // Lista simplificada de sufixos organizados em grupos
-    const sufixos = ['mente', 'ção', 'ções', 'idade', 'ível', 'ável', 'ismo', 'ista', 'oso', 'osa'];
-    const tamanhoMinimo = 3; // Tamanho mínimo da raiz da palavra
+function stem(word: string, rootSize?: number): string {
+    // Lista de sufixos mais comumente usados, com menor impacto no arquivo quando removidos.
+    const sufixos = ['al', 'ível', 'oso', 'ento', 'ista', 'mente','ar', 'er', 'ir', 'ção', 'são', 'eira', 'eiro', 'ura', 'ismo', 'ável', 'zinha', 'zinho', 'ada','ado', 'ido', 'oso', 'osa','amos','emos','antes','entes','mentes'];
 
     // Verificar e remover sufixos
-    for (const sufixo of sufixos) {
-        if (palavra.endsWith(sufixo)) {
-            const raiz = palavra.slice(0, -sufixo.length);
-            if (raiz.length >= tamanhoMinimo) {
-                return raiz; // Retornar a raiz se for válida
+    if (rootSize) {
+        const raiz = word.slice(0, rootSize);
+        return raiz; // Retornar a raiz se for válida
+    } else {
+        for (const sufixo of sufixos) {
+            if (word.endsWith(sufixo)) { // Verificar se a palavra termina com o sufixo
+                if (word.slice(0, -sufixo.length).length>=4){
+                return word.slice(0, -sufixo.length); // Remover o sufixo
+                }
             }
         }
     }
 
-    // Retornar palavra original se nenhum sufixo for removido
-    return palavra;
+    // Retornar a palavra original se nenhum sufixo for removido
+    return word;
 }
 
-function processarTextoRSLP(texto: string): string {
-    const palavras = texto.split(' ');
-    const palavrasStemizadas = palavras.map(stem);
-    return palavrasStemizadas.join(' ');
+function textProcessor(texto: string, rootSize?: number): string {
+    const words = texto.split(/\s+/);
+    const wordsStemmed = words.map(word=>stem(word,rootSize));
+    return wordsStemmed.join(' ');
 }
 
 // Função principal para processar o arquivo
-function processarArquivo(inputFilePath: string): void {
+function archiveProcessor(inputFilePath: string, rootSize?: number): void {
     const outputFilePath = inputFilePath.replace('.txt', '_out.txt');
 
     fs.readFile(inputFilePath, 'utf8', (err, data) => {
@@ -36,7 +39,7 @@ function processarArquivo(inputFilePath: string): void {
         }
 
         // Processar o texto lido
-        const textoProcessado = processarTextoRSLP(data);
+        const textoProcessado = textProcessor(data,rootSize);
 
         // Salvar o texto processado em um novo arquivo
         fs.writeFile(outputFilePath, textoProcessado, 'utf8', (err) => {
@@ -50,5 +53,7 @@ function processarArquivo(inputFilePath: string): void {
 }
 
 // Exemplo de uso
-const caminhoArquivo = 'C:/Users/marck/Desktop/teste.txt';
-processarArquivo(caminhoArquivo);
+let caminhoArquivo:string = 'C:/Users/marck/Desktop/teste.txt';
+archiveProcessor(caminhoArquivo);
+caminhoArquivo = 'C:/Users/marck/Desktop/teste2.txt';
+archiveProcessor(caminhoArquivo,3);

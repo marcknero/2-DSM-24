@@ -42,5 +42,10 @@
 
  | [`Atividade individual 1`](./1s2025/matComputacao/exercicioIndividual1) |
 
+ | Estrutura de Dados |
+ |----|
+
+ | [`Atividade individual 1`](./1s2025/EstruturaDados/exercicioIndividual1/) |
+
 
 </details>

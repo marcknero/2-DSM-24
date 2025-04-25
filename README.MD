@@ -32,19 +32,16 @@
 
  | Programação Web II |
  |----|
-
  | [`Atividade 1 - Props`](./1s2025/web2/Atv1Props/front/) |
  | [`Atividade 2 - Context`](./1s2025/web2/atvContext/front/) |
  | [`Atividade 3 - Rotas`](./1s2025/web2/atv3/front/) |
 
  | Matematica para Computação |
  |----|
-
  | [`Atividade individual 1`](./1s2025/matComputacao/exercicioIndividual1) |
 
  | Estrutura de Dados |
  |----|
-
  | [`Atividade individual 1`](./1s2025/EstruturaDados/exercicioIndividual1/) |
 
 

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
-import { headerStyle, logoStyle, menuStyle } from "../styles/index"
+import { styles } from "../styles/styles"
 
 
 export function Header() {
     return <>
-        <div style={headerStyle}>
+        <div style={styles.header}>
             <Logo />
             <Menu />
         </div>
@@ -13,16 +13,16 @@ export function Header() {
 
 function Menu() {
     return <>
-        <div style={menuStyle}>
-                <Link to="/palpite"> Megasena </Link>
-                <Link to="/historico"> Histórico </Link>
+        <div style={styles.menu}>
+                <Link to="/megasena"> Megasena </Link>
+                <Link to="/jogos"> Jogos </Link>
         </div>
     </>
 }
 
 function Logo() {
     return<>
-    <div style={logoStyle}>
+    <div style={styles.logo}>
         <h1>Fatec</h1>
         <h3>Jacareí</h3>
         <h4>Prof. Francisco de Moura</h4>

@@ -1,18 +1,26 @@
-import { useState } from "react";
+import { useState,useContext, useEffect } from "react";
 import Display from "./Display";
-
+import { LotteryContext } from "../contexts/MegaCtx";
 
 export default function MegaSena() {
-    const [showDisplay, setShowDisplay] = useState<boolean>(false);
+    const { jogos } = useContext(LotteryContext);
+    const [loading, setLoading] = useState(true);
 
-    return <>
-        <div>
-            {!showDisplay && (
-                <button onClick={() => setShowDisplay(true)}>
-                    Clique para Começar
-                </button>
-            )}
-            {showDisplay && <Display />}
-        </div>
-    </>
+    useEffect(() => {
+        if (jogos && jogos.megasena) {
+            setLoading(false);
+        }
+    }, [jogos]);
+
+    return (
+        <>
+            <div>
+                {loading ? (
+                    <h2>Carregando...</h2>
+                ) : (
+                    <Display />
+                )}
+            </div>
+        </>
+    );
 }

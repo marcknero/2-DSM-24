@@ -1,8 +1,8 @@
+import { styles } from "../styles/styles";
 import { BallProps } from "../types";
-import { ballStyle } from "../styles";
 export function Ball({ label }: BallProps) {
     return <>
-        <button style={ballStyle}>{label}</button>
+        <button style={styles.ball}>{label}</button>
     </>
 }
 

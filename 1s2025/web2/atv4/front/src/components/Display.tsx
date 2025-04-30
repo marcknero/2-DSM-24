@@ -1,16 +1,21 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { LotteryContext } from "../contexts/MegaCtx";
 import { Ball } from "./Ball";
-import { displayStyle } from "../styles/index";
+import { styles } from "../styles/styles";
 
 export default function Display() {
-    
+    const { jogos } = useContext(LotteryContext)
     return <>
-        <div>
-            <h2>Resultado Mega-Sena:</h2>
-            <div style={displayStyle}>
-                {sorted.map((num, index) => (
-                    <Ball key={index} label={num} />
+        <div style={styles.display}>
+            <div>
+                <h2>Resultado Mega-Sena:</h2>
+            </div>
+            <div>
+                <h3>Concurso: {jogos?.megasena.numeroDoConcurso}</h3>
+            </div>
+            <div>
+                {jogos?.megasena.dezenas.map((dezena, index) => (
+                    <Ball key={index} label={dezena} />
                 ))}
             </div>
 

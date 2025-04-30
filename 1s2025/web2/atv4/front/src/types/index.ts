@@ -5,6 +5,10 @@ export interface MegaCtxProps {
     addToHistory: (nros: number[]) => void;
 }
 
+export interface JogosProps{
+    [key:string]:Props;
+}
+
 export interface Props {
     acumulado: boolean;
     concursoEspecial: boolean;
@@ -22,14 +26,14 @@ export interface Props {
 }
 
 export interface BallProps {
-    label: number;
+    label: string;
 }
 
 export interface LotteryContextProps {
-    jogo: Props | undefined;
+    jogos: JogosProps;
 }
 export interface LotteryProps {
-    jogo: Props;
+    jogos: JogosProps;
 }
 
 export interface ProviderProps {
@@ -39,4 +43,8 @@ export interface ProviderProps {
 export interface ThemeContextProps {
     darkTheme: boolean;
     changeTheme: () => void;
+}
+
+export interface DisplayProps {
+    jogo: Props;
 }

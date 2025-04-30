@@ -1,15 +1,15 @@
 import { Routes,Route,Navigate } from "react-router-dom"
-import Historico from "../components/Historico"
-import Palpite from "../components/Megasena"
+import Jogos from "../components/Jogos"
+import Megasena from "../components/Megasena"
 
 
 export default function Rotas(){
     return(
         <Routes>
             <Route path='*' element={<Erro />}/>
-            <Route path="/" element={<Navigate to="/palpite" replace />} />
-            <Route path='/palpite' element={<Palpite />} />
-            <Route path='/historico' element={<Historico />} />
+            <Route path="/" element={<Navigate to="/megasena" replace />} />
+            <Route path='/megasena' element={<Megasena />} />
+            <Route path='/jogos' element={<Jogos />} />
         </Routes>
     )
 }

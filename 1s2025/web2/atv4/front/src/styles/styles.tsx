@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { DefaultTheme } from "styled-components";
 
 export const ButtonBall = styled.button`
 background-color: #209869;
@@ -89,12 +89,12 @@ export const StyledThemeBtn = styled.div`
     padding: 4px;
     }
 `
- export const LightTheme = {
+ export const LightTheme:DefaultTheme = {
     background: "rgba(147, 255, 137, 0.4)",
     color: "rgb(7, 8, 22)",
   };
   
-  export const DarkTheme = {
+  export const DarkTheme:DefaultTheme = {
     background: "rgba(0, 0, 0, 0.4)",
     color: "rgb(242, 248, 176)",
   };

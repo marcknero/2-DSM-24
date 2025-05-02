@@ -4,13 +4,13 @@ import type { ThemeContextProps } from '../types';
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [isDarkTheme, setDarkTheme] = useState(true);
 
   const changeTheme = () => setDarkTheme((prev) => !prev);
   
 
   return (
-    <ThemeContext.Provider value={{ darkTheme, changeTheme }}>
+    <ThemeContext.Provider value={{ isDarkTheme, changeTheme }}>
       {children}
     </ThemeContext.Provider>
   );

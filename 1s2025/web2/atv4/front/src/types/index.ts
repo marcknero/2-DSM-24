@@ -1,11 +1,12 @@
 import React from "react";
+import 'styled-components'
 export interface MegaCtxProps {
     history: number[][];
     addToHistory: (nros: number[]) => void;
 }
 
-export interface JogosProps{
-    [key:string]:Props;
+export interface JogosProps {
+    [key: string]: Props;
 }
 
 export interface Props {
@@ -40,7 +41,7 @@ export interface ProviderProps {
 }
 
 export interface ThemeContextProps {
-    darkTheme: boolean;
+    isDarkTheme: boolean;
     changeTheme: () => void;
 }
 
@@ -48,7 +49,8 @@ export interface DisplayProps {
     jogo: Props;
 }
 
-declare module "styled-components" {
+
+declare module 'styled-components' {
     export interface DefaultTheme {
       background: string;
       color: string;

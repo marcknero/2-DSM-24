@@ -1,5 +1,4 @@
 import React from "react";
-
 export interface MegaCtxProps {
     history: number[][];
     addToHistory: (nros: number[]) => void;
@@ -48,3 +47,10 @@ export interface ThemeContextProps {
 export interface DisplayProps {
     jogo: Props;
 }
+
+declare module "styled-components" {
+    export interface DefaultTheme {
+      background: string;
+      color: string;
+    }
+  }

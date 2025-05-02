@@ -1,7 +1,6 @@
 import { FaMoon, FaSun } from "react-icons/fa";
 import { useTheme } from "../contexts/ThemeCtx";
-import styled from "styled-components";
-
+import { StyledThemeBtn } from "../styles/styles";
 
 export function ThemeBtn(){
     const{darkTheme, changeTheme} = useTheme();
@@ -12,14 +11,3 @@ export function ThemeBtn(){
     )
 }
 
-const StyledThemeBtn = styled.div`
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 30px;
-    border-radius: 15%;
-    padding: 4px;
-    }
-`

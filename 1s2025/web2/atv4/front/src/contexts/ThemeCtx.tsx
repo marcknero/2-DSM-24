@@ -7,6 +7,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [darkTheme, setDarkTheme] = useState(true);
 
   const changeTheme = () => setDarkTheme((prev) => !prev);
+  
 
   return (
     <ThemeContext.Provider value={{ darkTheme, changeTheme }}>

@@ -1,24 +1,32 @@
 import { useContext } from "react";
 import { LotteryContext } from "../contexts/MegaCtx";
 import { Ball } from "./Ball";
-import { styles } from "../styles/styles";
+import styled from "styled-components";
+
 
 export default function Display() {
     const { jogos } = useContext(LotteryContext)
-    return <>
-        <div style={styles.display}>
-            <div>
-                <h2>Resultado Mega-Sena:</h2>
-            </div>
-            <div>
-                <h3>Concurso: {jogos?.megasena.numeroDoConcurso}</h3>
-            </div>
-            <div>
-                {jogos?.megasena.dezenas.map((dezena, index) => (
-                    <Ball key={index} label={dezena} />
-                ))}
-            </div>
-
-        </div>
-    </>
+    return (
+        <DisplayContainer >
+            <h2>Resultado Mega-Sena</h2>
+            <h3>Concurso: {jogos?.megasena.numeroDoConcurso}</h3>
+            {jogos?.megasena.dezenas.map((dezena, index) => (
+                <Ball key={index} label={dezena} />
+            ))}
+        </DisplayContainer>
+    )
 }
+const DisplayContainer = styled.div`
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 8px;
+    gap: px;
+    &:hover {
+    cursor: default;
+    }
+  `

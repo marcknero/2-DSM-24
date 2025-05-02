@@ -11,13 +11,10 @@ export default function Rotas(){
             <Route path='/megasena' element={<Megasena />} />
             <Route path='/jogos' element={<Jogos />} />
         </Routes>
-    )
+    );
 }
 
 function Erro(){
-    return (
-        <div>
-            <h1>Rota Inexistente</h1>
-        </div>
-    )
+    return (<h1>Rota Inexistente</h1>);
 }
+

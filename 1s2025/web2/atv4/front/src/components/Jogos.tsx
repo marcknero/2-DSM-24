@@ -1,7 +1,7 @@
 
 export default function Jogos() {
        
-    return <>
+    return (
        <h1>em desenvolvimento....</h1>
-    </>
+    )
 }

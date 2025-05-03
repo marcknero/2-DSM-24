@@ -1,54 +1,30 @@
-# React + TypeScript + Vite
+# Projeto de Loterias - Atividade Web II
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido como parte das atividades da disciplina **Desenvolvimento Web II**. O objetivo principal é criar uma aplicação React que consome dados de uma API de resultados de loterias e apresenta as informações de forma interativa e estilizada.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Exibição dos resultados da Mega-Sena e outros jogos de loteria.
+- Navegação entre diferentes rotas utilizando o React Router.
+- Alteração de tema (claro/escuro) com persistência de estado.
+- Estilização personalizada utilizando `styled-components`.
+- Consumo de API para obter os dados mais recentes dos jogos.
+- **extra:** Exibição dos resultados de outros jogos de loteria.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Principais Dependências
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React**: Biblioteca principal para construção da interface do usuário.
+- **React Router**: Gerenciamento de rotas para navegação entre páginas.
+- **Styled-Components**: Biblioteca para estilização de componentes utilizando CSS-in-JS.
+- **Axios**: Cliente HTTP para consumo da API de resultados de loterias.
+- **React Icons**: Biblioteca de ícones para melhorar a interface visual.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Outras Dependências
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática ao projeto.
+- **Vite**: Ferramenta de build e desenvolvimento rápido para projetos modernos.
+- **ESLint**: Ferramenta de linting para manter a qualidade do código.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Estrutura do Projeto baseada no padrão MVC

@@ -9,6 +9,7 @@ export interface JogosProps {
     [key: string]: Props;
 }
 
+
 export interface Props {
     acumulado: boolean;
     concursoEspecial: boolean;

@@ -89,6 +89,23 @@ export const StyledThemeBtn = styled.div`
     padding: 4px;
     }
 `
+
+export const Buttons = styled.button`
+background-color: #209869;
+color: #fff;
+padding: 5px 10px;
+margin-right: 10px;
+font-size: 15px;
+font-weight: bold;
+border: none;
+border-radius: 20px;
+cursor: pointer;
+align-items: center;
+gap: 8px;
+&:hover {
+  cursor: default;
+  }
+`
  export const LightTheme:DefaultTheme = {
     background: "rgba(147, 255, 137, 0.4)",
     color: "rgb(7, 8, 22)",

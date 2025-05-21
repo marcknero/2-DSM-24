@@ -13,7 +13,7 @@ function Menu() {
     return (
         <MenuContainer>
             <Link to="/megasena"> Megasena </Link>
-            <Link to="/jogos"> Outros </Link>
+            <Link to="/historico"> Historico </Link>
         </MenuContainer>
     );
 };

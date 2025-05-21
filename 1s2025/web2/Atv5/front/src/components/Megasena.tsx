@@ -8,7 +8,7 @@ export default function MegaSena() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        if (jogos && jogos.megasena) {
+        if (jogos && jogos[0]) {
             setLoading(false);
         }
     }, [jogos]);

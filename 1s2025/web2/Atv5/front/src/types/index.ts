@@ -1,12 +1,10 @@
 import React from "react";
 import 'styled-components'
-export interface MegaCtxProps {
-    history: number[][];
-    addToHistory: (nros: number[]) => void;
-}
+
+
 
 export interface JogosProps {
-    row: Props;
+    [key:number]: Props;
 
 }
 
@@ -39,10 +37,10 @@ export interface BallProps {
 }
 
 export interface LotteryContextProps {
-    jogos: JogosProps;
+    jogos: JogosProps[];
 }
 export interface LotteryProps {
-    jogos: JogosProps;
+    jogos: JogosProps[];
 }
 
 export interface ProviderProps {
@@ -55,7 +53,7 @@ export interface ThemeContextProps {
 }
 
 export interface DisplayProps {
-    jogo: Props;
+    jogo: Props | null;
 }
 
 

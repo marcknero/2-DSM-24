@@ -5,13 +5,13 @@ import { getLottery } from "../services/Lottery";
 export const LotteryContext = createContext({} as LotteryContextProps);
 
 export function LotteryProvider({ children }: ProviderProps) {
-    const [jogos, setJogos] = useState<JogosProps>(); // inicialização conforme JogosProps
+    const [jogos, setJogos] = useState<JogosProps[]>([]);
 
     useEffect(() => {
         (async function () {
             const result = await getLottery();
-            setJogos(result.jogos);
-            console.log("result", result.jogos)
+            setJogos(result.jogos); // Agora jogos é um array
+            console.log("context result",result)
         })();
     }, []);
 

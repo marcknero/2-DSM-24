@@ -4,7 +4,7 @@ import 'styled-components'
 
 
 export interface JogosProps {
-    [key:number]: Props;
+    [key:string]: Props;
 
 }
 

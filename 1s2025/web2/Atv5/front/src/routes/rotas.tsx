@@ -1,4 +1,4 @@
-import { Routes,Route,Navigate } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import MegaSena from "../components/Megasena";
 import Historico from "../components/Historico";
 
@@ -8,9 +8,8 @@ export default function Rotas(){
     return(
         <Routes>
             <Route path='*' element={<Erro />}/>
-            <Route path="/" element={<Navigate to="/megasena" replace />} />
-            <Route path='/megasena' element={<MegaSena />} />
-            <Route path='/historico' element={<Historico />} />
+            <Route path='/' element={<MegaSena />} />
+            <Route path=':selection' element={<Historico />} />
         </Routes>
     );
 }

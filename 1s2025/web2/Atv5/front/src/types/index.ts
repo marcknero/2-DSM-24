@@ -63,3 +63,9 @@ declare module 'styled-components' {
         color: string;
     }
 }
+
+export interface LotteryContextProps {
+    jogos: JogosProps[];
+    fetchJogos: (selection?: string) => Promise<void>;
+}
+

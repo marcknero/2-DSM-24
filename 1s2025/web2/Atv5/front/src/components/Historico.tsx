@@ -2,41 +2,58 @@ import { useEffect, useState } from "react";
 import { MegaSenaContainer } from "../styles/styles";
 import { Ball } from "./Ball";
 import { DisplayContainer } from "../styles/styles";
-import { useParams } from "react-router";
-import { getLottery } from "../services/Lottery";
 import api from "../services/api";
 
 export default function Historico() {
-    const { selection } = useParams();
     const [selectedGame, setSelectedGame] = useState<any | null>(null);
     const [notFound, setNotFound] = useState(false);
     const [options, setOptions] = useState<number[]>([]);
+    const [currentConcurso, setCurrentConcurso] = useState<string>("");
 
     useEffect(() => {
+        const fetchOptions = async () => {
+            try {
+                const response = await api.get("/concursos");
+                const concursos = response.data.map((item: any) => item.concurso);
+                setOptions(concursos);
+                
+                // Seleciona o concurso mais recente (ou o primeiro disponível)
+                if (concursos.length > 0) {
+                    const latestConcurso = concursos[0].toString();
+                    setCurrentConcurso(latestConcurso);
+                    fetchConcurso(latestConcurso);
+                }
+            } catch (error) {
+                console.error("Erro ao buscar concursos:", error);
+            }
+        };
+        
+        fetchOptions();
+    }, []);
+
+    const fetchConcurso = async (concursoId: string) => {
         setSelectedGame(null);
         setNotFound(false);
-        async function fetchConcurso() {
-            if (selection) {
-                const result = await getLottery(selection);
-                if (result.jogos[0]) {
-                    setSelectedGame(result.jogos[0]);
-                } else {
-                    setTimeout(() => setNotFound(true), 2000);
-                }
+        
+        try {
+            const response = await api.get(`${concursoId}`);
+            console.log(response.data);
+            if (response.data) {
+                setSelectedGame(response.data[0]);
+            } else {
+                setTimeout(() => setNotFound(true), 2000);
             }
-            console.log("rodando useEffect")
+        } catch (error) {
+            console.error(`Erro ao buscar concurso ${concursoId}:`, error);
+            setTimeout(() => setNotFound(true), 2000);
         }
-        fetchConcurso();
-    }, [selection]);
+    };
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await api.get("/concursos");
-            // console.log(response.data);
-            setOptions(response.data.map((item: any) => item.concurso));
-        };
-        fetchData();
-    }, []);
+    const handleConcursoChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const concursoId = e.target.value;
+        setCurrentConcurso(concursoId);
+        fetchConcurso(concursoId);
+    };
 
     return (
         <MegaSenaContainer>
@@ -48,16 +65,14 @@ export default function Historico() {
                         <h3>Concurso:
                             <div>
                                 <label htmlFor="opcoes">Escolha uma opção:</label>
-                                <select id="opcoes" name="opcoes" onChange={async (e) => {
-                                    const result = await getLottery(e.target.value);
-                                    if (result.jogos[0]) {
-                                        setSelectedGame(result.jogos[0]);
-                                    } else {
-                                        setTimeout(() => setNotFound(true), 2000);
-                                    }
-                                }}>
+                                <select 
+                                    id="opcoes" 
+                                    name="opcoes" 
+                                    value={currentConcurso}
+                                    onChange={handleConcursoChange}
+                                >
                                     {options.map((op, index) => (
-                                        <option key={index} value={`${op}`}  >
+                                        <option key={index} value={`${op}`}>
                                             {op}
                                         </option>
                                     ))}
@@ -80,7 +95,3 @@ export default function Historico() {
         </MegaSenaContainer>
     );
 }
-
-
-
-

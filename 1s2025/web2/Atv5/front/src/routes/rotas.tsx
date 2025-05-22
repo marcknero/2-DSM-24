@@ -4,17 +4,17 @@ import Historico from "../components/Historico";
 
 
 
-export default function Rotas(){
-    return(
+export default function Rotas() {
+    return (
         <Routes>
-            <Route path='*' element={<Erro />}/>
+            <Route path='*' element={<Erro />} />
             <Route path='/' element={<MegaSena />} />
-            <Route path=':selection' element={<Historico />} />
+            <Route path='/historico' element={<Historico />} />
         </Routes>
     );
 }
 
-function Erro(){
+function Erro() {
     return (<h1>Rota Inexistente</h1>);
 }
 

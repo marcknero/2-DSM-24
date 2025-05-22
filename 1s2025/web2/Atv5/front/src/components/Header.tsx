@@ -12,8 +12,8 @@ export function Header() {
 function Menu() {
     return (
         <MenuContainer>
-            <Link to="/"> Megasena </Link>
-            <Link to="/1"> Historico </Link>
+            <Link to="/"> Megasena </Link> 
+            <Link to="/historico"> Historico </Link>
         </MenuContainer>
     );
 };

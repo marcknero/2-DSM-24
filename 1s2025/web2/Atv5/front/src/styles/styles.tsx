@@ -30,7 +30,7 @@ export const DisplayContainer = styled.div`
     cursor: default;
     }
   `
-  export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
     display: flex;
     width: 100%;
     align-items: flex-end;
@@ -106,15 +106,26 @@ gap: 8px;
   cursor: default;
   }
 `
- export const LightTheme:DefaultTheme = {
-    background: "rgba(147, 255, 137, 0.4)",
-    color: "rgb(7, 8, 22)",
-  };
-  
-  export const DarkTheme:DefaultTheme = {
-    background: "rgba(0, 0, 0, 0.4)",
-    color: "rgb(242, 248, 176)",
-  };
-  
-  
- 
+export const LightTheme: DefaultTheme = {
+  background: "rgba(147, 255, 137, 0.4)",
+  color: "rgb(7, 8, 22)",
+};
+
+export const DarkTheme: DefaultTheme = {
+  background: "rgba(0, 0, 0, 0.4)",
+  color: "rgb(242, 248, 176)",
+};
+
+
+export const StyledSelect = styled.select`
+ background-color: inherit;
+ color: inherit;
+ font-size: 20px;
+ font-weight: bold;
+ border: soft;
+
+  &:focus {
+    background-color: ${(props) => props.theme.background};
+    font-weight: bold;
+  }
+ `

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { MegaSenaContainer } from "../styles/styles";
+import { MegaSenaContainer, DisplayContainer, StyledSelect } from "../styles/styles";
 import { Ball } from "./Ball";
-import { DisplayContainer } from "../styles/styles";
 import api from "../services/api";
 
 export default function Historico() {
@@ -65,7 +64,7 @@ export default function Historico() {
                         <h3>Concurso:
                             <div>
                                 <label htmlFor="opcoes">Escolha uma opção:</label>
-                                <select 
+                                <StyledSelect 
                                     id="opcoes" 
                                     name="opcoes" 
                                     value={currentConcurso}
@@ -76,7 +75,7 @@ export default function Historico() {
                                             {op}
                                         </option>
                                     ))}
-                                </select>
+                                </StyledSelect>
                             </div>
                         </h3>
                         <Ball label={selectedGame.bola1} />

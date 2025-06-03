@@ -37,6 +37,7 @@
  | [`Atividade 3 - Rotas`](./1s2025/web2/atv3/front/) |
  | [`Atividade 4 - Http e styled`](./1s2025/web2/atv4/front/) |
  | [`Atividade 5 - Http e styled`](./1s2025/web2/atv5) |
+ | [`Atividade 6 - Http e styled`](./1s2025/web2/atv6) |
 
  | Matematica para Computação |
  |----|

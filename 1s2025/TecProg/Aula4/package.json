@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  },
+  "name": "aula4",
+  "version": "1.0.0",
+  "description": "Atividade consiste na apresentação dos exercicios proposto do PDF fornecido pelo professor para o conteudo da aula 4 - Modificadores de visibilidade e estático\r Serão elencados em arquivos em subpastas dentro da pasta src, para diferenciar cada exercicio.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "um": "ts-node ./src/exercicio01/ex01_view.ts",
+    "dois": "ts-node ./src/exercicio02/ex02_view.ts",
+    "tres": "ts-node ./src/exercicio03/ex03_view.ts",
+    "quatro": "ts-node ./src/exercicio04/ex04_view.ts",
+    "cinco": "ts-node ./src/exercicio05/ex05.ts",
+    "seis": "ts-node ./src/exercicio06/ex06_view.ts",
+    "sete": "ts-node ./src/exercicio07/ex07.ts",
+    "oito": "ts-node ./src/exercicio08/ex08.ts",
+    "nove": "ts-node ./src/exercicio09/ex09.ts",
+    "dez": "ts-node ./src/exercicio10/ex10.ts"
+  },
+  "author": "",
+  "license": "ISC"
+}

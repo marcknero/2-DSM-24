@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import List from './components/List'
 import Map from './components/Map'
@@ -11,7 +10,7 @@ const AppContainer = styled.div`
 `
 
 const ListContainer = styled.div`
-  width: 10%; /* Define a largura fixa para o List */
+  width: 20%; /* Define a largura fixa para o List */
   height: 100%; /* Ocupa toda a altura da tela */
   border-right: 1px solid #ccc; /* Adiciona uma borda para separar visualmente */
   box-sizing: border-box;

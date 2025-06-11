@@ -38,6 +38,8 @@
  | [`Atividade 4 - Http e styled`](./1s2025/web2/atv4/front/) |
  | [`Atividade 5 - Http e styled`](./1s2025/web2/atv5) |
  | [`Atividade 6 - Http e styled`](./1s2025/web2/atv6) |
+ | [`Atividade 7 - Http e styled`](./1s2025/web2/atv7/) |
+ | [`Atividade 6 - Http e styled`](./1s2025/web2/atividade8/) |
 
  | Matematica para Computação |
  |----|

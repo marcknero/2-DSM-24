@@ -14,7 +14,7 @@ export async function list(reg: Request, res: Response) {
       const result = await db.query(
         `SELECT ST_AsText(geom) as geom
         FROM censo 
-        WHERE nm_mun = $1`,
+        WHERE nm_mun ilike $1`,
         [city]
       );
       // Obtém o centroide de todos os setores censitários de uma determinada cidade
@@ -22,7 +22,7 @@ export async function list(reg: Request, res: Response) {
         `SELECT ST_X(ST_Centroid(ST_Union(geom))) as longitude,
         ST_Y(ST_Centroid(ST_Union(geom))) as latitude
         FROM censo 
-        WHERE nm_mun = $1`,
+        WHERE nm_mun ilike $1`,
         [city]
       );
 

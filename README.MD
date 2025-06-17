@@ -32,14 +32,14 @@
 
  | Programação Web II |
  |----|
- | [`Atividade 1 - Props`](./1s2025/web2/Atv1Props/front/) |
- | [`Atividade 2 - Context`](./1s2025/web2/atvContext/front/) |
- | [`Atividade 3 - Rotas`](./1s2025/web2/atv3/front/) |
- | [`Atividade 4 - Http e styled`](./1s2025/web2/atv4/front/) |
- | [`Atividade 5 - Http e styled`](./1s2025/web2/atv5) |
- | [`Atividade 6 - Http e styled`](./1s2025/web2/atv6) |
- | [`Atividade 7 - Http e styled`](./1s2025/web2/atv7/) |
- | [`Atividade 6 - Http e styled`](./1s2025/web2/atividade8/) |
+ | [`Atividade 1`](./1s2025/web2/Atv1Props/front/) |
+ | [`Atividade 2`](./1s2025/web2/atvContext/front/) |
+ | [`Atividade 3`](./1s2025/web2/atv3/front/) |
+ | [`Atividade 4'](./1s2025/web2/atv4/front/) |
+ | [`Atividade 5'](./1s2025/web2/atv5) |
+ | [`Atividade 6'](./1s2025/web2/atv6) |
+ | [`Atividade 7'](./1s2025/web2/atv7/) |
+ | [`Atividade 6'](./1s2025/web2/atividade8/) |
 
  | Matematica para Computação |
  |----|

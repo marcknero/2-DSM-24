@@ -39,7 +39,7 @@
  | [`Atividade 5`](./1s2025/web2/atv5) |
  | [`Atividade 6`](./1s2025/web2/atv6) |
  | [`Atividade 7`](./1s2025/web2/atv7/) |
- | [`Atividade 6`](./1s2025/web2/atividade8/) |
+ | [`Atividade 8`](./1s2025/web2/atividade8/) |
 
  | Matematica para Computação |
  |----|

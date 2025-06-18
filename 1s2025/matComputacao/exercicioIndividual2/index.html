@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Frequência de Palavras com Chart.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    #chart-container { width: 90vw; max-width: 900px; }
+    .legend { margin-top: 20px; }
+    .legend span { display: inline-block; margin-right: 15px; }
+    textarea { width: 90vw; max-width: 900px; }
+  </style>
+</head>
+<body>
+  <h2>Frequência de Palavras (Chart.js)</h2>
+  <input type="file" id="fileInput" accept=".txt">
+  <br><br>
+  <textarea id="inputText" rows="8" placeholder="Ou cole seu texto aqui..."></textarea><br>
+  <button onclick="processar()">Gerar Gráfico</button>
+  <div id="chart-container">
+    <canvas id="grafico"></canvas>
+  </div>
+  <div class="legend" id="legenda"></div>
+
+  <script>
+    let chartInstance = null;
+    let textoArquivo = null;
+
+    document.getElementById('fileInput').addEventListener('change', function() {
+      const fileInput = this;
+      const textarea = document.getElementById('inputText');
+      //arquivo ???
+      if (fileInput.files.length) {
+        textarea.value = '';
+        textarea.disabled = true;
+
+        //processa arquivo
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          textoArquivo = e.target.result;
+          processar();
+        };
+        reader.readAsText(file, 'UTF-8');
+      } else {
+        // arquivo vazio
+        textarea.disabled = false;
+        textoArquivo = null;
+      }
+    });
+
+    function processar() {
+      let texto = '';
+      if (textoArquivo) {
+        texto = textoArquivo;
+      } else {
+        texto = document.getElementById('inputText').value;
+      }
+
+      texto = texto
+        .toLowerCase()
+        .replace(/[.,!?;:()\[\]{}"'-]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+      if (!texto) {
+        document.getElementById('legenda').innerHTML = '';
+        if (chartInstance) chartInstance.destroy();
+        return;
+      }
+
+      const palavras = texto.split(' ').filter(Boolean);
+      const freq = {};
+      palavras.forEach(p => freq[p] = (freq[p] || 0) + 1);
+
+      const lista = Object.entries(freq)
+        .sort((a, b) => b[1] - a[1])
+        .map(([palavra, contagem], idx) => ({
+          numero: idx + 1,
+          palavra,
+          contagem
+        }));
+
+      // dados
+      const labels = lista.map(e => e.numero.toString());
+      const data = lista.map(e => e.contagem);
+
+      // grafico
+      const ctx = document.getElementById('grafico').getContext('2d');
+      if (chartInstance) chartInstance.destroy();
+      chartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Frequência',
+            data: data,
+            backgroundColor: 'rgba(54, 162, 235, 0.7)'
+          }]
+        },
+        options: {
+          scales: {
+            x: {
+              title: { display: true, text: 'Palavra (veja legenda)' }
+            },
+            y: {
+              beginAtZero: true,
+              title: { display: true, text: 'Frequência' }
+            }
+          }
+        }
+      });
+
+      // Legenda
+      let legendaHTML = '<h3>Legenda</h3>';
+      lista.forEach(e => {
+        legendaHTML += `<span>${e.numero}: ${e.palavra}</span>`;
+      });
+      document.getElementById('legenda').innerHTML = legendaHTML;
+    }
+  </script>
+</body>
+</html>

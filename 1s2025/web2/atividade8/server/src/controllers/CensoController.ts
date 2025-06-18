@@ -26,7 +26,7 @@ export async function list(reg: Request, res: Response) {
         [city]
       );
 
-      res.json({centroid:result_center.rows[0], polygons:result.rows});
+      res.json({ centroid: result_center.rows[0], polygons: result.rows });
     } catch (error: any) {
       res.json({ message: "Erro interno do servidor" });
     }
@@ -53,5 +53,18 @@ export async function getByPoint(req: Request, res: Response) {
     } catch (error: any) {
       res.json({ message: "Erro interno do servidor" });
     }
+  }
+}
+
+// Retorna a lista de cidades cadastradas no banco de dados
+export async function listCities(req: Request, res: Response) {
+  try {
+    const result = await db.query(
+      `SELECT DISTINCT nm_mun FROM censo ORDER BY nm_mun`
+    );
+    res.json(result.rows.map((row) => row.nm_mun));
+  } catch (error) {
+    console.error("Erro ao listar cidades:", error);
+    res.status(500).json({ message: "Erro interno do servidor" });
   }
 }

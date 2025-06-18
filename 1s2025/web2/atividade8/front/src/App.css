@@ -50,6 +50,10 @@ html, body, #root, #map-container {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
+.info-modal p {
+  margin: 5px 0;
+  font-size: 14px;
+}
 .city-selector {
   position: absolute;
   top: 10px;
@@ -60,7 +64,7 @@ html, body, #root, #map-container {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: white;
+  background-color: rgb(92, 116, 153);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .city-search {
@@ -83,8 +87,8 @@ html, body, #root, #map-container {
 .city-search button {
   padding: 10px 15px;
   font-size: 16px;
-  background-color: #007bff;
-  color: white;
+  background-color: #587797;
+  color: rgb(5, 5, 5);
   border: none;
   border-radius: 4px;
   cursor: pointer;

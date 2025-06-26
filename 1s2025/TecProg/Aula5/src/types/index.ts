@@ -20,6 +20,7 @@ export abstract class Livro {
     }
     abstract print(): void;
 }
+
 export class Pilha<T> {
     private items: T[] = [];
     push(item: T): void {

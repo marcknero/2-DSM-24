@@ -48,6 +48,12 @@
  | Estrutura de Dados |
  |----|
  | [`Atividade individual 1`](./1s2025/EstruturaDados/exercicioIndividual1/) |
+ 
+ | Tecnicas de Programação |
+ |----|
+ | [`Aula 4`](./1s2025/TecProg/Aula4/) |
+ | [`Aula 5`](./1s2025/TecProg/Aula5/) |
+ | [`Aula 6`](./1s2025/TecProg/Aula6/) |
 
 
 </details>

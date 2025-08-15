@@ -1,0 +1,17 @@
+ Professor Neymar, começou a aula configurando ambiente de programaçao, utilizando o prisma orm, e instalando com npm install algumas dependencias e afins...
+como segue
+
+npm init
+npm install express prisma @prisma/client dotenv
+npm install -D typescript ts-node @types/node @types/express
+npx tsc -init
+npx prisma init --datasource-provider postgresql
+
+
+
+
+DATABASE_URL="postgresql://postgres:123@localhost:5432/aula1" 
+demonstração de configuração do dotenv, utiliando o postgresql
+onde postgresql:<usuario>:<senha>@<porta de acesso, no caso localhost e porta padrão>/<dbName, nome que deu ao banco de dados>
+
+arquivo adicionado mostra o passo a passo da aula, no modelo tutorial.

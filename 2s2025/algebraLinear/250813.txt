@@ -1,9 +1,0 @@
- Hoje a professora corrigiu alguns exercicios que tinham ficado pendentes e matrizes, realizei em caderno a part.
- Ela demonstrou uma matriz transposta e sua transposição, para transpor a matris, sua nomenclatura resebe o sobrescrito t ou p, para transpor, trancreve-se os componentes em ordem, primeira linha vira primeira coluna, segunda linha vira segunda coluna e vise e versa.
-  Em uma matriz simetrica nota-se que sua transposição será igual sua forma original.
-  a subtração de matrizes simetricas é 0, matriz nula, onde todos os componentes é zero.
-  matriz triangular superior é quando uma matriz apresenta seus componentes com valores direfentes de zero para cima de sua liha diagonal principal, e somente zeros a baixo de sua linha diagonal principal. Assim a triangular superior, quando transposta, encontra-se uma triangular inferior.
-  diagonal so tem zeros, com exceção da linha diagonal, ou seja, sua transposta é simetrica, portanto A^t = A
-
-  Dispensa aprovada hoja para a materia e professora deixando a materia tambem
-  ultimo diario de aula.. a menos que alguem como o fabricio assuma a materia, lecioinando de forma mais direcionada para a pratica de programação

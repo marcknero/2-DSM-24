@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciar Carros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Carros</h1>
+  <nav>
+    <button onclick="location.href='index.html'">Home</button>
+    <button onclick="location.href='pessoas.html'">Pessoas</button>
+    <button onclick="location.href='associacoes.html'">Associações</button>
+  </nav>
+  <section>
+    <h2>Adicionar Carro</h2>
+    <form id="formCarro">
+      <input type="text" id="modelo" placeholder="Modelo" required>
+      <input type="text" id="marca" placeholder="Marca" required>
+      <input type="number" id="ano" placeholder="Ano" required>
+      <button type="submit">Adicionar Carro</button>
+    </form>
+  </section>
+  <section>
+    <h2>Buscar Carro</h2>
+    <input type="number" id="searchCarroId" placeholder="ID do Carro">
+    <button onclick="searchCarro()">Buscar</button>
+    <div id="searchCarroResult"></div>
+  </section>
+  <section>
+    <h2>Lista de Carros</h2>
+    <button id="toggleListaCarros">Mostrar/Esconder Lista</button>
+    <ul id="listaCarros" style="display:none;"></ul>
+    <!-- Update button is rendered by JS in each carro item and search result -->
+    <form id="formUpdateCarro" style="display:none; margin-top:16px;">
+      <h3>Atualizar Carro</h3>
+      <input type="hidden" id="updateCarroId">
+      <input type="text" id="updateModelo" placeholder="Modelo" required>
+      <input type="text" id="updateMarca" placeholder="Marca" required>
+      <input type="number" id="updateAno" placeholder="Ano" required>
+      <button type="submit">Salvar Alterações</button>
+      <button type="button" id="cancelUpdateCarro">Cancelar</button>
+    </form>
+  </section>
+  <script src="carros.js"></script>
+</body>
+</html>

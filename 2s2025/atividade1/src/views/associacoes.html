@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciar Associações Pessoa-Carro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Associações Pessoa-Carro</h1>
+  <nav>
+    <button onclick="location.href='index.html'">Home</button>
+    <button onclick="location.href='pessoas.html'">Pessoas</button>
+    <button onclick="location.href='carros.html'">Carros</button>
+  </nav>
+  <section>
+    <h2>Associar Pessoa a Carro</h2>
+    <form id="formAssociacao">
+      <select id="associacaoPessoaId"></select>
+      <select id="associacaoCarroId"></select>
+      <button type="submit">Associar</button>
+    </form>
+  </section>
+  <section>
+  <h2>Lista de Associações</h2>
+  <button id="toggleListaAssociacoes">Mostrar/Esconder Lista</button>
+  <ul id="listaAssociacoes" style="display:none;"></ul>
+  </section>
+  <script src="associacoes.js"></script>
+</body>
+</html>

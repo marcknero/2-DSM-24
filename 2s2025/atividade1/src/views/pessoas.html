@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciar Pessoas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Pessoas</h1>
+  <nav>
+    <button onclick="location.href='index.html'">Home</button>
+    <button onclick="location.href='carros.html'">Carros</button>
+    <button onclick="location.href='associacoes.html'">Associações</button>
+  </nav>
+  <section>
+    <h2>Adicionar Pessoa</h2>
+    <form id="formPessoa">
+  <input type="text" id="pessoaNome" placeholder="Nome" required>
+  <input type="email" id="pessoaEmail" placeholder="E-mail" required>
+  <input type="text" id="pessoaTelefone" placeholder="Telefone" required>
+  <button type="submit">Adicionar Pessoa</button>
+    </form>
+  </section>
+  <section>
+    <h2>Buscar Pessoa</h2>
+    <input type="number" id="searchPessoaId" placeholder="ID da Pessoa">
+    <button onclick="searchPessoa()">Buscar</button>
+    <div id="searchPessoaResult"></div>
+  </section>
+  <section>
+  </section>
+  <section>
+    <h2>Lista de Pessoas</h2>
+    <button id="toggleListaPessoas">Mostrar/Esconder Lista</button>
+    <ul id="listaPessoas" style="display:none;"></ul>
+    <!-- Update button is rendered by JS in each pessoa item and search result -->
+    <form id="formUpdatePessoa" style="display:none; margin-top:16px;">
+  <h3>Atualizar Pessoa</h3>
+  <input type="hidden" id="updatePessoaId">
+  <input type="text" id="updatePessoaNome" placeholder="Nome" required>
+  <input type="email" id="updatePessoaEmail" placeholder="E-mail" required>
+  <input type="text" id="updatePessoaTelefone" placeholder="Telefone" required>
+  <button type="submit">Salvar Alterações</button>
+  <button type="button" id="cancelUpdatePessoa">Cancelar</button>
+    </form>
+  </section>
+  <script src="pessoas.js"></script>
+</body>
+</html>

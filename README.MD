@@ -55,5 +55,11 @@
  | [`Aula 5`](./1s2025/TecProg/Aula5/) |
  | [`Aula 6`](./1s2025/TecProg/Aula6/) |
 
+<summary> Atividades do 2º semestre de 2025 </summary>
+
+ | Programação Web III |
+ |----|
+ | [`Atividade 1`](./2s2025/web3/atividade1/) |
+
 
 </details>

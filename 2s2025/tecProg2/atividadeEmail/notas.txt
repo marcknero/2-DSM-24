@@ -1,0 +1,3 @@
+ausente em aula, criado para armazenar os dados tratados na aula pelo 
+professor, copiando seu material diretamente do github
+hdblouro

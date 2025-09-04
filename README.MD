@@ -63,5 +63,10 @@
  |----|
  | [`Atividade 1`](./2s2025/web3/atividade1/) |
 
+ | Técnicas de programação II |
+ |----|
+ | [`Atividade Revisão`](./2s2025/tecProg2/atividadeRevisao/) |
+ | [`Atividade Tratamento de Dados`](./2s2025/tecProg2/atividadeTratamentoDados/) |
+
 
 </details>

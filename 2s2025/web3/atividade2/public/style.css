@@ -111,4 +111,5 @@ button[onclick^="deleteItem"] {
 
 button[onclick^="deleteItem"]:hover {
   background: #fab1a0;
-  color: #2d3e50;
+  color: #2d3e50
+}

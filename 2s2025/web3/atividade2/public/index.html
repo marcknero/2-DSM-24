@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Compras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Lista de compras</h1>
+
+  <!-- Formulário de cadastro -->
+  <form id="form-items">
+    <input type="hidden" id="item-id">
+    <input type="text" id="name" placeholder="Nome" required>
+    <input type="number" id="price" placeholder="Preço" required>
+    <button type="submit">Salvar</button>
+  </form>
+
+  <h2>Lista de Produtos</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Preço</th>
+      </tr>
+    </thead>
+    <tbody id="list-items"></tbody>
+    <tfoot>
+        <tr>
+            <td style="font-weight: bold;">TOTAL</td>
+            <td id="total-price" style="font-weight: bold;">R$ 0,00</td>
+        </tr>
+    </tfoot>
+
+  <script src="script.js"></script>
+</body>
+</html>

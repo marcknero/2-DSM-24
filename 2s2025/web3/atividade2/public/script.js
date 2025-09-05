@@ -35,9 +35,15 @@ async function saveItem(e) {
 
     const id = document.getElementById("item-id").value;
     const name = document.getElementById("name").value;
-    const price = document.getElementById("price").value;
+    let price = document.getElementById("price").value;
+    price = price.replace(',', '.');
+    const priceNumber = Number(price);
+    if (isNaN(priceNumber) || priceNumber <= 0) {
+        alert("Por favor, informe um valor válido para o preço");
+        return;
+    }
 
-    const item = { name, price };
+    const item = { name, price: priceNumber };
     if (id) {
         //se encontrar o id, alterar o item (PUT)
         await fetch(`${API_URL}/${id}`, {

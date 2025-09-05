@@ -79,6 +79,7 @@ async function enviarEmail(destinatario: string, email: string, assunto: string,
     /* eslint no-console: 0 */
 
     const nodemailer = require('nodemailer');
+    const path = require('path');
 
     const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
@@ -96,6 +97,18 @@ async function enviarEmail(destinatario: string, email: string, assunto: string,
         to: email,
         subject: assunto,
         html: corpo,
+        attachments: [
+            {
+                filename:'logo.png',
+                path: path.join(__dirname,'imagens','logo.png'),
+                cid:'logo'
+            },
+            {
+                filename:'assinatura.png',
+                path: path.join(__dirname,'imagens','assinatura.png'),
+                cid:'assinatura'
+            }
+        ]
     };
 
     transporter.sendMail(message, (error: any, info: any) => {

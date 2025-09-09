@@ -71,6 +71,8 @@
  | [`Atividade Envio E-mail`](./2s2025/tecProg2/atividadeEmail/) |
 
  | Banco de Dados Não Relacional |
+ | ---- |
  | [`Atividade 1 - Revisão`](./2s2025/DB/atividadeRevisao1/) |
 
 </details>
+

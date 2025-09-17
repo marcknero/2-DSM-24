@@ -1,0 +1,95 @@
+questão 1:
+	use mega_arena
+	db.createCollection('jogadores')
+	db.createCollection('torneios')
+	db.createCollection('partidas')
+
+questão 2:
+	modelo de documento: torneio: ({
+		torneio_id:number,
+		nome: String,
+		obs: String,
+		jogadores: [{jogador1},{jogador2}...{jogadorn}],
+		premiacao: 5000
+		})
+
+	exemplo:
+		db.torneio.insertOne({
+			torneio_id:1,
+			nome:"Campeonato de Verão",
+			obs:"Torneio regional com 8 equipes",
+			jogadores: [
+				{jogador_id:1,nome:"fulano",nasc:"13/11/1992",equipe:"Magic Experts"}],
+			premiacao: 5000
+			})
+
+
+	em caso de atualização apenas para adição de jogadores, podemos usar o push
+		db.torneio.updateOne({ torneio_id:1},
+			{
+			$push: {
+				jogadores: { jogador_id:2,
+					nome:"Beltrano",
+					nasc: "05/05/1988",
+					equipe:"Fire Wolves"
+					}
+				}
+			})
+
+questão 3:
+	db.torneio.insertOne({
+		torneio_id:1,
+		nome:"campeonato de verão",
+		obs: "torneio regional com 8 equipes",
+		jogadores_id:[],
+		premiacao:4000
+		})
+	usando o mesmo metodo do anterior para adicionar os IDs dos jogadores adicionados separadamente no sistema do torneio, e posteriormente utilizar o aggregate para verificar os dados e consulta-los
+	db.torneio.aggregate([
+  {
+    $match: { torneio_id: 1 }
+  },
+  {
+    $lookup: {
+      from: "jogadores",
+      localField: "jogadores_id",
+      foreignField: "_id",
+      as: "jogadores_info"
+    }
+  }
+])
+
+questão 4:
+	em um cenário onde varios jogadores podem participar de varios torneios ou em mais de uma equipe, seria interessante utilizar o referencing, uma vez que o volume de dados de jogadores e equipes podem ser reduzidos se nao copiados a todo momento.
+	porem se o torneio é unico e cada torneio, fica limitado a jogadores e equipes fixas,sem grande rotatividade ficaria mais interessante utilizar o embedding pois aninhariamos as informações de forma rapida e basicamente mais eficientemente.
+
+questao 5:
+	db.torneios.find({premiacao: {$gte:4000}})
+
+questao 6:
+	db.jogadores.find({
+		$and: [
+			{nacionalidade:"Brasileiro"},
+			{idade: {$gt:21}}
+			]
+			})
+
+questao 7:
+	db.jogadores.find({
+		nick: {$exists:true}
+		})
+
+questao 8:
+	db.torneios.updateOne({
+		nome: /copa cs: go/i
+		},{
+		$set: {status:"ativo}
+		})
+
+questao 9:
+	db.jogadores.deleteOne({nome:/pedro/i})
+
+Questao 10:
+	db.torneios.find({}).sort({premiacao:-1}).skip(1).limit(1)
+
+

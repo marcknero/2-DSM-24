@@ -73,6 +73,7 @@
  | Banco de Dados Não Relacional |
  | ---- |
  | [`Atividade 1 - Revisão`](./2s2025/DB/atividadeRevisao1/) |
+ | [`Atividade 2 - aula 5`](./2s2025/DB/atividadePraticaAula5/) |
 
 </details>
 

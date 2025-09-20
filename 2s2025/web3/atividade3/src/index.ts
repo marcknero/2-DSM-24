@@ -57,3 +57,21 @@ app.put('/livros/:id', async(req,res)=>{
   }
 });
 
+//rota para deletar um livro
+app.delete('/livros/:id', async(req,res)=>{
+  const {id} = req.params;
+  try{
+    const livroDeletado = await Livro.findByIdAndDelete(id);
+    if(!livroDeletado){
+      return res.status(404).json({error:'livro não encontrado'});
+    }
+    res.json({message:'livro deletado com sucesso'});
+  } catch (error) {
+    res.status(400).json({error:'erro ao deletar livro'});
+  }
+});
+
+//iniciar servidor
+app.listen(PORT, ()=>{
+  console.log(`Servidor rodando na porta ${PORT}`);
+});

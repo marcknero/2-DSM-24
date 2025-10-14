@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Previsão do Tempo por Cidade</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Previsão do Tempo</h1>
+
+
+  <div class="card" style="display:flex;gap:8px;align-items:center;">
+    <input id="cityInput" placeholder="Digite o nome da cidade (ex: São Paulo)" style="flex:1;" />
+    <button id="searchBtn">Buscar</button>
+  </div>
+
+  <div id="status" style="margin-top:8px;color:#666;"></div>
+  <div id="result"></div>
+
+  <script type="module" src="/script.js"></script>
+</body>
+</html>

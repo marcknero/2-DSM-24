@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; max-width:800px; margin:20px auto; padding:0 16px; background:#f6f8fb; }
+input { padding:8px; width:100%; border:1px solid #ccc; border-radius:6px; }
+button { padding:8px 12px; border-radius:6px; border: none; background:#1e88e5; color:white; cursor:pointer; }
+button:hover { background:#1565c0; }
+.card { border:1px solid #ddd; padding:12px; margin-top:12px; border-radius:8px; background:white; box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+.row { display:flex; gap:12px; align-items:center; }
+.header { display:flex; gap:8px; align-items:center; }
+#result .card { display:flex; gap:16px; align-items:center; }
+#result .card img { width:100px; }
+#result h2 { margin:0 0 6px 0; }
+.details { margin-left:auto; text-align:right; color:#555; }
+.status { margin-top:8px; color:#666; }
+@media (max-width:520px) { #result .card { flex-direction:column; align-items:flex-start; } .details { text-align:left; margin-left:0; } }

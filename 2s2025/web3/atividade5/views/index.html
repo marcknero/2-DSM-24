@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Produtos</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <h1>Cadastro de Produtos</h1>
+  <form id="formProduct">
+    <select id="formato" placeholder="Formato" required>
+      <option value="Vinil">Vinil</option>
+      <option value="CD">CD</option>
+    <input type="text" id="titulo" placeholder="Titulo" required>
+    <input type="text" id="artista" placeholder="Artista" required>
+    <input type="number" id="ano" placeholder="Ano" required>
+    <input type="text" id="genero" placeholder="Genero" required>
+    <input type="number" id="preco" placeholder="Preço" required>
+    <button type="submit">Cadastrar Produto</button>
+  </form>
+  
+  <h2>Produtos Cadastrados</h2>
+  <div id="productsList" class="products"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

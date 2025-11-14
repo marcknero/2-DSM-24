@@ -72,6 +72,7 @@
  | [`Atividade Revisão`](./2s2025/tecProg2/atividadeRevisao/) |
  | [`Atividade Tratamento de Dados`](./2s2025/tecProg2/atividadeTratamentoDados/) |
  | [`Atividade Envio E-mail`](./2s2025/tecProg2/atividadeEmail/) |
+ | [`Atividade crudBasico`](./2s2025/tecProg2/atividadeCRUDBasico/) |
 
  | Banco de Dados Não Relacional |
  | ---- |

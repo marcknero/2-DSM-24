@@ -74,6 +74,8 @@
  | [`Atividade Tratamento de Dados`](./2s2025/tecProg2/atividadeTratamentoDados/) |
  | [`Atividade Envio E-mail`](./2s2025/tecProg2/atividadeEmail/) |
  | [`Atividade crudBasico`](./2s2025/tecProg2/atividadeCRUDBasico/) |
+ | [`Atividade Coesão e Acoplamento`](./2s2025/tecProg2/atvCoesaoEAcoplamento/) |
+ | [`Atividade Conexão MongoDB`](./2s2025/tecProg2/atvConexaoMongo/) |
 
  | Banco de Dados Não Relacional |
  | ---- |

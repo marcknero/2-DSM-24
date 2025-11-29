@@ -76,6 +76,8 @@
  | [`Atividade crudBasico`](./2s2025/tecProg2/atividadeCRUDBasico/) |
  | [`Atividade Coesão e Acoplamento`](./2s2025/tecProg2/atvCoesaoEAcoplamento/) |
  | [`Atividade Conexão MongoDB`](./2s2025/tecProg2/atvConexaoMongo/) |
+ | [`Atividade Biblioteca`](./2s2025/tecProg2/atvBiblioteca/) |
+ | [`Atividade Escpça`](./2s2025/tecProg2/atvEscola/) |
 
  | Banco de Dados Não Relacional |
  | ---- |

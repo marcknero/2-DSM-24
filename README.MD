@@ -84,6 +84,7 @@
  | [`Atividade 1 - Revisão`](./2s2025/DB/atividadeRevisao1/) |
  | [`Atividade 2 - aula 5`](./2s2025/DB/atividadePraticaAula5/) |
  | [`Atividade 3 - Revisao 5 a 8`](./2s2025/DB/AtividadeRevisao5a8/) |
+ | [`Atividade 4 - Revisao P3`](./2s2025/DB/revisaoP3/) |
 
 </details>
 

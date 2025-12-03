@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Planeja + — Eventos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 24 24" aria-hidden><path fill="currentColor" d="M3 13h8V3H3v10zm10 8h8v-6h-8v6zM3 21h8v-6H3v6zm10-18v6h8V3h-8z"/></svg>
+        <h1>Planeja +</h1>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="panel form-panel card">
+        <h2>Adicionar Evento</h2>
+        <form id="eventForm" class="form">
+          <div class="row">
+            <label>
+              Título
+              <input type="text" id="title" name="title" placeholder="Nome do evento" required />
+            </label>
+            <label>
+              Valor (R$)
+              <input type="number" step="0.01" id="value" name="value" placeholder="0.00" required />
+            </label>
+          </div>
+          <div class="row">
+            <label>
+              Local
+              <input type="text" id="location" name="location" placeholder="Local do evento" required />
+            </label>
+          </div>
+          
+          <div class="row" style="margin-top:12px;">
+            <label style="flex:1;">
+              Descrição
+              <input type="text" id="description" name="description" placeholder="Observações..." />
+            </label>
+            <label>
+              Data
+              <input type="date" id="date" name="date" required />
+            </label>
+            <div class="actions">
+              <button type="submit" class="btn btn-green">Cadastrar Evento</button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel list-panel card">
+        <div class="summary">
+          <div>
+            <div class="summary-title">Eventos Agendados: </div>
+            <div id="total" class="summary-amount">R$ 0,00</div>
+          </div>
+          <div id="loading" class="loader hidden" aria-hidden></div>
+        </div>
+
+        <ul id="eventsList" class="expenses-list" aria-live="polite"></ul>
+        <div id="empty" class="empty hidden">Nenhum evento cadastrado ainda.</div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

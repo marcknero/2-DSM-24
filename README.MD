@@ -67,6 +67,9 @@
  | [`Atividade 4`](./2s2025/web3/atividade4/) |
  | [`Atividade 5`](./2s2025/web3/atividade5/) |
  | [`Atividade 6`](./2s2025/web3/atividade6/) |
+ | [`Atividade 7`](./2s2025/web3/atividade7/) |
+ | [`Atividade 8`](./2s2025/web3/atividade8/) |
+
 
  | Técnicas de programação II |
  |----|

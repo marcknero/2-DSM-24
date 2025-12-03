@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ordens de Serviço</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 24 24" aria-hidden><path fill="currentColor" d="M3 13h8V3H3v10zm10 8h8v-6h-8v6zM3 21h8v-6H3v6zm10-18v6h8V3h-8z"/></svg>
+        <h1>Ordens de Serviço</h1>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="panel form-panel card">
+        <h2>Criar OS</h2>
+        <form id="orderForm" class="form">
+          <div class="row">
+            <label>
+              Título
+              <input type="text" id="title" name="title" placeholder="Título da OS" required />
+            </label>
+            <label>
+              Descrição
+              <input type="text" id="description" name="description" placeholder="Descrição da OS" required />
+            </label>
+          </div>
+          <div class="row">
+            <label>
+              Status
+              <select id="status" name="status" required>
+                <option value="Pendente">Pendente</option>
+                <option value="Em Andamento">Em Andamento</option>
+                <option value="Concluído">Concluído</option>
+              </select>
+            </label>
+            <label>
+              Prioridade
+              <select id="priority" name="priority" required>
+                <option value="Baixa">Baixa</option>
+                <option value="Média">Média</option>
+                <option value="Alta">Alta</option>
+              </select>
+            </label>
+          </div>
+          <div class="row">
+            <label>
+              Responsável
+              <input type="text" id="assignedTo" name="assignedTo" placeholder="Nome do responsável"/>
+            </label>
+            <label>
+              Setor
+              <input type="text" id="sector" name="sector" placeholder="Setor solicitante" required/>
+            </label>
+          </div>
+          <div class="row">
+            <label>
+              Prazo estimado:
+              <input type="date" id="estimatedCompletionDate" name="estimatedCompletionDate"/>
+            </label>
+            <label>
+              Custo estimado:
+              <input type="number" id="value" name="value" placeholder="Custo estimado" step="0.01" required/>
+            </label>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn btn-green">Criar OS</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel list-panel card">
+        <label>Ordens de serviço:</label>
+
+        <!-- loader usado por showLoading() em views/script.js -->
+        <div id="loading" class="loader hidden" aria-hidden="true"></div>
+
+        <ul id="ordersList" class="orders-list" aria-live="polite"></ul>
+
+        <!-- elemento vazio usado por renderEmpty() em views/script.js -->
+        <div id="empty" class="empty hidden">Nenhuma ordem cadastrada ainda.</div>
+
+        <div class="list-panel"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
